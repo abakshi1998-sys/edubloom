@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBloom - Your Learning Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <header class="top-header" id="top-header">
+        <div class="header-content">
+            <div class="logo-container" id="logo-container">
+                <div class="logo-flower">
+                    <div class="flower-center">🌼</div>
+                    <div class="flower-petals">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                        <div class="petal petal-4"></div>
+                        <div class="petal petal-5"></div>
+                    </div>
+                </div>
+                <div class="logo-accessories">
+                    <div class="logo-book">📚</div>
+                    <div class="logo-pencil">✏️</div>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">EduBloom</span>
+                    <span class="logo-tagline">Learning Adventures</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="welcome-title">🌟 Welcome to EduBloom! 🌟</h1>
+                <div class="welcome-illustration">
+                    <div class="learning-path">
+                        <div class="path-step bounce">📚</div>
+                        <div class="path-step bounce" style="animation-delay: 0.2s;">🎯</div>
+                        <div class="path-step bounce" style="animation-delay: 0.4s;">🏆</div>
+                    </div>
+                </div>
+                <p class="welcome-description">
+                    Get ready for an amazing learning adventure! We'll discover your awesome skills and help you bloom into an even better learner! 🌸
+                </p>
+                <button id="start-btn" class="btn btn-primary pulse">
+                    🚀 Start Your Learning Adventure
+                </button>
+            </div>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen hidden">
+            <div class="setup-content">
+                <h2 class="setup-title">Let's Get Started! 📝</h2>
+                
+                <div class="instructions-card">
+                    <h3>How EduBloom Works:</h3>
+                    <ul class="instructions-list">
+                        <li>✨ Answer 6 fun questions at your own pace</li>
+                        <li>💡 Use our helpful hints if you need them</li>
+                        <li>🎯 Choose the best answer or skip if you're not sure</li>
+                        <li>📈 Watch your skill level grow on our magical ladder!</li>
+                        <li>🌟 The more you try, the better we can help you learn!</li>
+                    </ul>
+                </div>
+
+                <form id="setup-form" class="setup-form">
+                    <div class="form-group">
+                        <label for="student-name" class="form-label">What's your name, young learner?</label>
+                        <input type="text" id="student-name" class="form-control" placeholder="Enter your first name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade-select" class="form-label">What grade are you in?</label>
+                        <select id="grade-select" class="form-control" required>
+                            <option value="">Choose your grade</option>
+                            <option value="Kindergarten">Kindergarten</option>
+                            <option value="1st Grade">1st Grade</option>
+                            <option value="2nd Grade">2nd Grade</option>
+                            <option value="3rd Grade">3rd Grade</option>
+                            <option value="4th Grade">4th Grade</option>
+                            <option value="5th Grade">5th Grade</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        🎯 Begin Assessment
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Assessment Screen -->
+        <div id="assessment-screen" class="screen hidden">
+            <div class="assessment-layout">
+                <!-- Level Ladder -->
+                <div class="level-ladder">
+                    <h3 class="ladder-title">🪜 Skill Level Ladder</h3>
+                    <div class="ladder-container">
+                        <div class="ladder-step" data-level="L8">
+                            <div class="ladder-rung">
+                                <span class="level-number">L8</span>
+                                <span class="level-name">👑 Mastery - Ready for Challenges</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step" data-level="L7">
+                            <div class="ladder-rung">
+                                <span class="level-number">L7</span>
+                                <span class="level-name">🏆 Outstanding - Expert Level</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step" data-level="L6">
+                            <div class="ladder-rung">
+                                <span class="level-number">L6</span>
+                                <span class="level-name">🎯 Excellent - Advanced Learning</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step" data-level="L5">
+                            <div class="ladder-rung">
+                                <span class="level-number">L5</span>
+                                <span class="level-name">⭐ Good Work - Intermediate Skills</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step" data-level="L4">
+                            <div class="ladder-rung">
+                                <span class="level-number">L4</span>
+                                <span class="level-name">🌟 Making Progress - Solid Understanding</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step" data-level="L3">
+                            <div class="ladder-rung">
+                                <span class="level-number">L3</span>
+                                <span class="level-name">🌳 Developing Well - Core Knowledge</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step" data-level="L2">
+                            <div class="ladder-rung">
+                                <span class="level-number">L2</span>
+                                <span class="level-name">🌿 Growing Strong - Basic Skills</span>
+                            </div>
+                        </div>
+                        <div class="ladder-step active" data-level="L1">
+                            <div class="ladder-rung">
+                                <span class="level-number">L1</span>
+                                <span class="level-name">🌱 Just Starting - Building Foundation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Area -->
+                <div class="question-area">
+                    <div class="question-header">
+                        <div class="progress-info">
+                            <span id="student-greeting" class="student-greeting"></span>
+                            <div class="question-progress">
+                                <span id="current-question">1</span> of 6 Questions
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="question-card lift-on-hover">
+                        <h3 id="question-text" class="question-text">Loading your first question...</h3>
+                        
+                        <div id="question-options" class="question-options">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+
+                        <!-- Hint System -->
+                        <div class="hint-system" id="hint-system">
+                            <button id="hint-btn" class="btn btn-hint">
+                                💡 Need a Hint?
+                            </button>
+                            <div id="hint-display" class="hint-display hidden">
+                                <div class="hint-content">
+                                    <h4>💡 Helpful Hint:</h4>
+                                    <p id="hint-text"></p>
+                                    <div class="hint-counter">
+                                        Hint <span id="current-hint">1</span> of 3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-actions">
+                            <button id="skip-btn" class="btn btn-secondary">
+                                ⏭️ Skip Question
+                            </button>
+                            <button id="next-btn" class="btn btn-primary" disabled>
+                                ➡️ Next Question
+                            </button>
+                            <button id="submit-btn" class="btn btn-primary submit-btn hidden">
+                                🎯 Submit Assessment
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="encouragement-box">
+                        <p id="encouragement-message">🌟 You're doing great! Take your time and think carefully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen hidden">
+            <div class="results-content">
+                <div id="success-result" class="result-card hidden">
+                    <div class="celebration-animation">🎉</div>
+                    <h2 class="results-title">🌟 Amazing Work! 🌟</h2>
+                    <div class="final-level" id="final-level-display">
+                        <span id="final-level-text"></span>
+                    </div>
+                    <div class="results-summary">
+                        <p id="results-message"></p>
+                        <div class="results-stats">
+                            <div class="stat-item stat-questions">
+                                <span class="stat-number" id="answered-count">0</span>
+                                <span class="stat-label">Questions Answered</span>
+                            </div>
+                            <div class="stat-item stat-correct">
+                                <span class="stat-number" id="correct-count">0</span>
+                                <span class="stat-label">Correct Answers</span>
+                            </div>
+                            <div class="stat-item stat-hints">
+                                <span class="stat-number" id="hints-used-count">0</span>
+                                <span class="stat-label">Hints Used</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="retest-result" class="result-card hidden">
+                    <h2 class="retest-title">🔄 Let's Try Again!</h2>
+                    <div class="retest-message">
+                        <p>You're doing great! We just need a few more answers to find your perfect learning level.</p>
+                        <p>🌟 Don't worry - this is completely normal. Let's give it another try and answer more questions!</p>
+                    </div>
+                    <div class="results-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="retest-answered-count">0</span>
+                            <span class="stat-label">Questions Answered</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="retest-skipped-count">0</span>
+                            <span class="stat-label">Questions Skipped</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="restart-btn" class="btn btn-primary btn-lg">
+                        🔄 Take Assessment Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
